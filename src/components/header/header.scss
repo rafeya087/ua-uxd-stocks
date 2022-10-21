@@ -1,0 +1,140 @@
+.navBar_main_container {
+  min-height: 100px;
+  z-index: 7897897 !important;
+
+  .appBar_main_top {
+    background: #ffffff;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 17px 0px;
+    min-height: 100px;
+    position: fixed;
+    top: 0;
+    z-index: 7897897 !important;
+
+    .LeftNav_main {
+      display: flex;
+      align-items: center;
+
+      .logoHeader_mobile {
+        img {
+          width: 110px;
+          height: 50px;
+          margin-right: 35px;
+        }
+      }
+    }
+
+    .middleNav_main {
+      button,
+      a {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #99a4b8;
+
+        &::after {
+          content: "";
+          padding-left: 25px;
+          padding-right: 25px;
+          color: #b6b8b8;
+          font-size: 20px;
+          font-weight: 100;
+          position: relative;
+          top: 1px;
+        }
+
+        &:last-child {
+          &::after {
+            content: "";
+          }
+        }
+
+        &:hover {
+          background-color: transparent;
+          background: transparent;
+        }
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    .menuItemList_right_top {
+      img {
+        margin-right: 2rem;
+      }
+
+      .contact_buttonHeader {
+        min-width: 151px;
+        border: 0;
+        height: 48px;
+        background: #edeff2;
+        border-radius: 5px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        letter-spacing: -0.5px;
+        color: #12141d;
+        text-transform: inherit;
+      }
+    }
+
+    .navBar__container {
+      @media (min-width: 1600px) {
+        max-width: calc(100% - 30vh);
+        padding: 0 !important;
+      }
+    }
+  }
+
+  .cartIcon_top {
+    position: relative;
+    .cartItems {
+      margin-left: 8px;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      font-size: 12px;
+      background: #04aa69;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      position: absolute;
+      top: 3px;
+      right: 23px;
+    }
+  }
+}
+
+.menuItem_NavList {
+  padding: 20px 5rem 20px 1rem !important;
+  position: relative;
+
+  &:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #e3e3e3;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 17px;
+    color: #1f1f1f;
+  }
+}

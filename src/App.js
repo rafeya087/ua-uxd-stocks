@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import React, { Suspense } from 'react';
+import { theme } from './utils/theme';
 import './App.css';
+import FallbackLoader from './components/loader/fallBackLoader';
+import AppRoutes from './routes/MainRouter';
+import { ThemeProvider } from '@mui/material';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ThemeProvider theme={theme}>
+          <Suspense fallback={<FallbackLoader />}>
+            <AppRoutes />
+          </Suspense>
+        </ThemeProvider>
     </div>
   );
 }
